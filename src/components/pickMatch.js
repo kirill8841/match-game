@@ -1,7 +1,7 @@
 /**
  * Make the optimal decision about the amout of matches the AI should take.
  * @property {number} aiMatches - the amount of matches the AI 
- * (the decision algorythm) has.
+ * (the decision algorithm) has.
  * @property {number} totalMatches - the total amout of matches that can be taken
  */
 function pickMatch(aiMatches, totalMatches) {
@@ -16,10 +16,10 @@ function pickMatch(aiMatches, totalMatches) {
    * 
    * The boolean value at given indices [n, m] means that if there are n matches
    * left and you are at m position (column) according to the turn and the parity
-   * of the matches, then the true value means it's a winning position, and false
+   * of the matches. The true value means it's a winning position, and false
    * means that if the other player does everything right, you'll lose.
    * 
-   * This is the pattern only for a game, where users change either 1, 2, or 3 matches.
+   * This is the pattern only for a game where users pick either 1, 2, or 3 matches.
    * The number of matches overall is only restricted to being odd to avoid
    * ties. The given pattern repeats every eight matches.
    */

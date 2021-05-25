@@ -1,7 +1,10 @@
 import React from "react";
 import Button from '@material-ui/core/Button';
 
-
+/**
+ * A component that displays from one to three buttons that allow user to choose
+ * the number of matches to pick.
+ */
 function MatchButtons(props) {
 
   function onClickHandler(matchNumber) {
@@ -17,14 +20,14 @@ function MatchButtons(props) {
 
   return (
     <div>
-      <Button variant="contained" color="primary" onClick={() => onClickHandler(1)}>1 Matches</Button>
+      <Button size="large" variant="contained" color="primary" onClick={() => onClickHandler(1)}>1 Matches</Button>
       {
         props.totalMatches >= 2 &&
-        <Button variant="contained" color="primary" onClick={() => onClickHandler(2)}>2 Matches</Button>
+        <Button size="large" variant="contained" color="primary" onClick={() => onClickHandler(2)}>2 Matches</Button>
       }
       {
         props.totalMatches >= 3 &&
-        <Button variant="contained" color="primary" onClick={() => onClickHandler(2)}>3 Matches</Button>
+        <Button size="large" variant="contained" color="primary" onClick={() => onClickHandler(2)}>3 Matches</Button>
       }
     </div>
   )

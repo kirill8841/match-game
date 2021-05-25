@@ -1,9 +1,10 @@
 import React from "react";
 import MainMenuButton from "./MainMenuButton.jsx"
 
+
 function EndGameScreen(props) {
   return (
-    <div>
+    <div className="lowered">
       {
         props.matches.playerMatches % 2 === 0 ?
         <h1>You have won! The guy in the mask will miss'ya!</h1>
@@ -16,10 +17,10 @@ function EndGameScreen(props) {
       {
         props.matches.playerMatches % 2 === 0 ?
         <p>Let's see if you can do this once again...</p>
-        : <p>Try your luck once again</p>
+        : <p>Try your luck once again, kiddo</p>
       }
       <MainMenuButton
-        style={"endgame-button"}
+        styling={"endgame-button"}
         setGameStage={props.setGameStage}
         setMatches={props.setMatches}
       />

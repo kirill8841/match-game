@@ -4,6 +4,8 @@ import pickMatch from "./pickMatch.js"
 
 
 function AiTurnAnimation(props) {
+
+  // A state to handle animation in this component
   const [isThinking, setIsThinking] = useState(true);
 
   let optimalChoice = pickMatch(props.matches.aiMatches, props.matches.totalMatches)
@@ -34,7 +36,6 @@ function AiTurnAnimation(props) {
         props.setGameStage("playerTurn")
       }, 2000);
       return () => clearTimeout(timer)
-      
     }
   })
 
@@ -42,13 +43,11 @@ function AiTurnAnimation(props) {
   return (
     <div>
       { isThinking ?
-        <h1>The AI is thinking how to overmatch you<Dot>.</Dot><Dot>.</Dot><Dot>.</Dot></h1>
-        : <h1>The AI has chosen to pick {optimalChoice} matches!</h1>
+        <h1>The AI is thinking about how to overmatch you<Dot>.</Dot><Dot>.</Dot><Dot>.</Dot></h1>
+        : <h1>The AI has chosen to pick {optimalChoice} match{optimalChoice !== 1 && "es"}!</h1>
       }
-      
     </div>
   )
-
 }
 
 
