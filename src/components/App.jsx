@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
-import pickMatch from "./pickMatch.js"
 import MatchButtons from "./MatchButtons.jsx"
 import SetupForm from './SetupForm';
 import AiTurnAnimation from "./AiTurnAnimation.jsx"
-
-// class MatchButton extends React.Component {
-//   render() {
-//     return (
-//       <button onClick={() => this.props.matchChoiceHandler(this.props.matches)}>{this.props.matches} Matches</button>
-//     )
-//   }
-// }
+import ShowMatches from "./ShowMatches.jsx"
+import EndGameScreen from './EndGameScreen.jsx';
+import MainMenuButton from './MainMenuButton.jsx';
 
 
 function App() {
@@ -35,23 +29,52 @@ function App() {
     />
     )
     
+  } else if (matches.totalMatches <= 0 && (gameStage === "aiTurn" || gameStage === "playerTurn")) {
+    return (
+      <EndGameScreen 
+      matches={matches}
+      setMatches={setMatches}
+      setGameStage={setGameStage}
+    />
+    )
+    
   } else if (gameStage === "aiTurn") {
     return (
-      <AiTurnAnimation />
+      <div>
+        <MainMenuButton
+          setGameStage={setGameStage}
+          setMatches={setMatches}
+        />
+        <AiTurnAnimation 
+        matches={matches}
+        setMatches={setMatches}
+        setGameStage={setGameStage}
+      />
+      <ShowMatches 
+        matches={matches}
+      />
+      </div>
+      
     )
 
   } else if (gameStage === "playerTurn") {
-
-
-
-  } else if (gameStage === "gameOver") {
-
-
-  }
-
-
-
-
+    return (
+      <div>
+        <MainMenuButton
+          setGameStage={setGameStage}
+          setMatches={setMatches}
+        />
+        <ShowMatches 
+          matches={matches}
+        />
+        <MatchButtons
+          setMatches={setMatches}
+          setGameStage={setGameStage}
+          totalMatches={matches.totalMatches}
+        />
+      </div>
+    )
+  } 
 }
 
 

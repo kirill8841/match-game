@@ -4,9 +4,9 @@ import React from "react"
 function SetupForm(props) {
 
   function matchesSliderHandler(event) {
-    props.setMatches((prevValue) => {
+    props.setMatches((prevProps) => {
       return {
-        ...prevValue,
+        ...prevProps,
         totalMatches: event.target.value
       }
     })

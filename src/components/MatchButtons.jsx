@@ -3,21 +3,29 @@ import React from "react";
 
 
 function MatchButtons(props) {
+
+  function onClickHandler(matchNumber) {
+    props.setMatches((prevProps) => {
+      return {
+        ...prevProps,
+        totalMatches: prevProps.totalMatches - matchNumber,
+        playerMatches: prevProps.playerMatches + matchNumber
+      }
+    })
+    props.setGameStage("aiTurn")
+  }
+
   return (
     <div>
-      <button>1 Matches</button>
-      <button>2 Matches</button>
-      <button>3 Matches</button>
-      
-      {/* <MatchButton matchChoiceHandler={this.matchChoiceHandler} matches={1}/>
-       {(this.state.totalMatches >= 2) ?
-            <MatchButton matchChoiceHandler={this.matchChoiceHandler} matches={2}/>
-            : null
-          }
-          {(this.state.totalMatches >= 3) ?
-            <MatchButton matchChoiceHandler={this.matchChoiceHandler} matches={3}/>
-            : null
-          } */}
+      <button onClick={() => onClickHandler(1)}>1 Matches</button>
+      {
+        props.totalMatches >= 2 &&
+        <button onClick={() => onClickHandler(2)}>2 Matches</button>
+      }
+      {
+        props.totalMatches >= 3 &&
+        <button onClick={() => onClickHandler(2)}>3 Matches</button>
+      }
     </div>
   )
 }
