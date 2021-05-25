@@ -1,5 +1,5 @@
 import React from "react";
-
+import Button from '@material-ui/core/Button';
 
 
 function MatchButtons(props) {
@@ -17,14 +17,14 @@ function MatchButtons(props) {
 
   return (
     <div>
-      <button onClick={() => onClickHandler(1)}>1 Matches</button>
+      <Button variant="contained" color="primary" onClick={() => onClickHandler(1)}>1 Matches</Button>
       {
         props.totalMatches >= 2 &&
-        <button onClick={() => onClickHandler(2)}>2 Matches</button>
+        <Button variant="contained" color="primary" onClick={() => onClickHandler(2)}>2 Matches</Button>
       }
       {
         props.totalMatches >= 3 &&
-        <button onClick={() => onClickHandler(2)}>3 Matches</button>
+        <Button variant="contained" color="primary" onClick={() => onClickHandler(2)}>3 Matches</Button>
       }
     </div>
   )

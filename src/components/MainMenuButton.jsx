@@ -1,4 +1,5 @@
 import React from "react";
+import Button from '@material-ui/core/Button';
 
 function MainMenuButton(props) {
 
@@ -12,8 +13,8 @@ function MainMenuButton(props) {
   }
 
   return (
-    <div>
-      <button className={props.style ? props.style : "main-menu-button"} onClick={onClickHandler}>Main Menu</button>
+    <div className={props.style ? props.style : "main-menu-button"}>
+      <Button onClick={onClickHandler} variant="contained" color="primary">Main Menu</Button>
     </div>
   )
 }

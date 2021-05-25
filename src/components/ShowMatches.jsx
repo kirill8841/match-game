@@ -15,7 +15,7 @@ function ShowMatches(props) {
     <div>
       <h3>Your opponent has got {props.matches.aiMatches} 🔥</h3>
 
-      <h3>Total matches available</h3>
+      <h3>Total matches available:</h3>
       <p>{totalMatchesString}</p>
 
       <h3>You've got {props.matches.playerMatches} 🔥</h3>

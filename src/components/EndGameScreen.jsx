@@ -19,6 +19,7 @@ function EndGameScreen(props) {
         : <p>Try your luck once again</p>
       }
       <MainMenuButton
+        style={"endgame-button"}
         setGameStage={props.setGameStage}
         setMatches={props.setMatches}
       />

@@ -1,4 +1,5 @@
 import React from "react"
+import Button from '@material-ui/core/Button';
 
 
 function SetupForm(props) {
@@ -15,8 +16,22 @@ function SetupForm(props) {
   return (
     <div>
       <h1>Choose who starts</h1>
-      <button id="aiButton" onClick={() => props.startGame(false)}>AI</button>
-      <button id="playerButton" onClick={() => props.startGame(true)}>You</button><br />
+      <Button 
+        variant="contained" 
+        color="primary"
+        id="aiButton" 
+        onClick={() => props.startGame(false)}
+      >
+        AI
+      </Button>
+      <Button 
+        variant="contained" 
+        color="primary"
+        id="playerButton" 
+        onClick={() => props.startGame(true)}
+      >
+        You
+      </Button><br />
       <h3>Choose the number of matches</h3>
       <input 
       type="range" 
