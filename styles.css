@@ -1,0 +1,35 @@
+body {
+  background-color: #c9d6df;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: larger;
+}
+
+button.MuiButtonBase-root {
+  margin: 10px;
+}
+
+.main-menu-button {
+ display: flex;
+ flex-direction: row-reverse;
+}
+
+.endgame-button {
+  position:static;
+}
+
+.heading-bar {
+  width: 100;
+  margin-bottom: 7%;
+}
+
+.lowered {
+  margin-top: 10%;
+}
+
+.description {
+  color: grey;
+  min-width: 400px;
+  max-width: 600px;
+  margin: 8% auto 0 auto;
+}
