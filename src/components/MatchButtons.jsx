@@ -27,7 +27,7 @@ function MatchButtons(props) {
       }
       {
         props.totalMatches >= 3 &&
-        <Button size="large" variant="contained" color="primary" onClick={() => onClickHandler(2)}>3 Matches</Button>
+        <Button size="large" variant="contained" color="primary" onClick={() => onClickHandler(3)}>3 Matches</Button>
       }
     </div>
   )
