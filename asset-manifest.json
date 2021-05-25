@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/match-game/static/js/main.aa572e56.chunk.js",
-    "main.js.map": "/match-game/static/js/main.aa572e56.chunk.js.map",
+    "main.js": "/match-game/static/js/main.9da0359c.chunk.js",
+    "main.js.map": "/match-game/static/js/main.9da0359c.chunk.js.map",
     "runtime-main.js": "/match-game/static/js/runtime-main.e25bc424.js",
     "runtime-main.js.map": "/match-game/static/js/runtime-main.e25bc424.js.map",
     "static/js/2.856aefa0.chunk.js": "/match-game/static/js/2.856aefa0.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.e25bc424.js",
     "static/js/2.856aefa0.chunk.js",
-    "static/js/main.aa572e56.chunk.js"
+    "static/js/main.9da0359c.chunk.js"
   ]
 }
